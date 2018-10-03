@@ -1,0 +1,6 @@
+
+                procedure foo(a, b: integer ; c: real) ;
+                  var x,y: real ;
+                  BEGIN
+                    return;
+                  END

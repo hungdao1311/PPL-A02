@@ -1,0 +1,7 @@
+
+        function foo(): real;
+        var a,b: integer;
+        begin
+        while (a>b) do  
+        a := a/b;
+        end

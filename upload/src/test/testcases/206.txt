@@ -1,0 +1,6 @@
+procedure foo(a : integer;b : real);
+    begin
+        d := a[b] := b + 5;
+    return;
+    end
+        

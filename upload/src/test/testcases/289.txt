@@ -1,0 +1,8 @@
+
+var a, b, c: integer;
+procedure main();
+begin
+a := a1 := a2 := a3 := 4+2;
+end
+        
+        

@@ -1,0 +1,27 @@
+
+        var d: integer;
+        f: string;
+        procedure Hn(n,a,b: integer);
+            begin
+            if n = 0 then exit();
+            Hn(n-1,a,6-a-b);
+            inc(d);
+            writeln(f,d,". ",a," -> ",b);
+            Hn(n-1,6-a-b,b);
+            end
+        procedure runHn(n: integer);
+            begin
+            d :=  0;
+            assign(f,"hanoi.out");
+            rewrite(f);
+            writeln("-----------------");
+            Hn(n,1,2);
+            writeln(f,"Total: ",d," step(s)");
+            close(f);
+            readln();
+            end
+        procedure main();
+        BEGIN
+        runHn(3);
+        END
+        

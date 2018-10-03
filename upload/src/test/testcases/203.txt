@@ -1,0 +1,6 @@
+procedure foo(a : integer;b : real);
+    begin
+        e := (3+4)/3;
+        putint(a);
+    return;
+    end

@@ -1,0 +1,6 @@
+function foo(a : integer;b : real): array [1 .. 5] of real;
+             begin
+                 foo(2)[3+x] := a[b[2]] + 3;
+                 return a;
+            end
+        

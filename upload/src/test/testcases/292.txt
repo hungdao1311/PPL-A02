@@ -1,0 +1,8 @@
+
+function foo (i :integer) : real; begin a:= 5; end
+                   var a, b, c: integer;
+                   //do something
+                   procedure xinchao();
+                   bEgin
+                     writeln("xin chao");
+                   End

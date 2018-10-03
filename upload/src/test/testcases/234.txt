@@ -1,0 +1,10 @@
+
+Procedure DrawLine(X : Integer; Y : Integer);
+    
+    Begin 
+        For count := 1 to 10 do
+        Write(chr(196));
+    End
+
+
+        

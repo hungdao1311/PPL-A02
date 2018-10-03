@@ -1,0 +1,12 @@
+
+                procedure qsort_recur();
+                BEGIN { QuicksortRecur }
+                { If there's anything to do... }
+                IF start < stop THEN 
+                    BEGIN
+                        splitpt := Split(start, stop);
+                        QuicksortRecur(start, splitpt-1);
+                        QuicksortRecur(splitpt+1, stop);
+                    END
+                END
+                

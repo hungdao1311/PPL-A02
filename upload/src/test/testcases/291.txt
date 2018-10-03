@@ -1,0 +1,6 @@
+
+procedure main();
+begin
+    writeln("abacad");
+    putstring("wegwbwe");
+end

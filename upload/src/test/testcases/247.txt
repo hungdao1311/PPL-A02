@@ -1,0 +1,8 @@
+
+                procedure foo();
+                    function foo_child():boolean; 
+                        begin
+                        end
+                  begin
+                    end
+                

@@ -1,0 +1,8 @@
+function IsPrintable(aCharacter: string): Boolean;
+        begin
+        result := (aCharacter <> "7") and    //bell (beeps)
+                    (aCharacter <> "8") and    //Backspace 
+                    (aCharacter <> "10") and   //Carrage return
+                    (aCharacter <> "13");      //Line feed
+        end
+                

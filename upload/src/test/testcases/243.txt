@@ -1,0 +1,6 @@
+
+        PROCEDURE test_err();
+        begin
+            foo := a[b[2]];
+        end
+        

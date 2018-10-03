@@ -1,0 +1,12 @@
+
+        procedure test();
+        Var
+            myString : String;
+
+        Begin
+            myString := "Hey! How are you?";
+            Writeln("The length of the string is " , to_integer(myString[0]));
+            Write(myString[to_integer(myString[0])]);
+            Write(" is the last character.");
+        End
+        

@@ -1,0 +1,5 @@
+
+                FUNcTION foo(a, b: integer ; c: real): real;
+                  BEGIN
+                    return a[1];
+                  END

@@ -1,0 +1,11 @@
+
+var check : Boolean;
+    abc   : String;
+Procedure main();
+Begin
+    While (check = True) Do
+    Begin
+        reAdLn(abc);
+    End
+End
+        

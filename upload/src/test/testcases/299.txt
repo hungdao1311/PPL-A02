@@ -1,0 +1,8 @@
+
+        PROCEDURE test();
+        var a: real;
+        begin
+            putln();
+            writeln(abced+aced);
+        end
+        

@@ -1,0 +1,9 @@
+function GetRadius() : real;
+                var
+                radius : real;
+                begin
+                Write("Enter the radius: ");
+                ReadLn(radius);
+                GetRadius := radius;
+                end
+                

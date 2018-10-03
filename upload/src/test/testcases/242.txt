@@ -1,0 +1,4 @@
+function foo(): integer;
+                   BEGIN
+                    foo(foo(2));
+                   END

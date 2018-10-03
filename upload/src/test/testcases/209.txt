@@ -1,0 +1,5 @@
+procedure main();
+            begin
+                 a := (3+4*(5/4)-20+100 mod 4) ;
+            end
+        

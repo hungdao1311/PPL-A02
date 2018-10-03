@@ -1,0 +1,4 @@
+procedure foo();
+                   BEGIN
+                    while (true) do begin begin end eND
+                   END

@@ -1,0 +1,11 @@
+
+Var 
+    S : String;
+
+Procedure main();
+Begin
+    S := "Hey! It's Me, your best friend?";
+    Write(S);
+
+End
+        

@@ -1,0 +1,5 @@
+function foo(): integer;
+                   BEGIN
+                    foo();
+                    bar(a);
+                   END

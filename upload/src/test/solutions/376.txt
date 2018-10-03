@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(main),[],VoidType,[],[CallStmt(Id(Read),[Id(MilTime)]),[<AST.Assign object at 0x7fc600bd12b0>, [<AST.Assign object at 0x7fc600bd1898>, [<AST.CallStmt object at 0x7fc600bd1668>, []]]]])])

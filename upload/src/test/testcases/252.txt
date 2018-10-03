@@ -1,0 +1,5 @@
+FUNcTION fooc( b: boolean; c: real):array [1 .. 2] of integer ;
+                  var x: real ;
+                  BEGIN
+                    a:= a+1;
+                  END

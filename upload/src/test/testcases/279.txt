@@ -1,0 +1,14 @@
+
+                procedure Rectangle();
+var 
+   i, j: integer;
+begin
+   for i:= 1 to length do
+   begin
+     for j:= 1 to width do
+        write(" * ");
+        writeln();
+   end
+end
+
+            

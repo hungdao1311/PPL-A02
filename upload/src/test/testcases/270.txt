@@ -1,0 +1,10 @@
+
+Var 
+    S     : String;
+   
+Procedure main();
+Begin
+    S := "day la mot \n string"; 
+    Write(S); 
+End
+        

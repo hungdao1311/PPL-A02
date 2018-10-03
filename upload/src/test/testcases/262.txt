@@ -1,0 +1,5 @@
+proceDure main () ;
+        var x,y: integer;
+        BEGIN
+            putIntLn(4);
+        end

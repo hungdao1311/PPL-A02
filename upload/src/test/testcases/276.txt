@@ -1,0 +1,7 @@
+
+                function fibo(x: integer): integer;
+                begin
+                    if x<=2 then return 1;
+                    else return fibo(x-2)+ fibo(x-1);
+                end
+                

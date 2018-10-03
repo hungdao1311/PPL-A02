@@ -1,0 +1,6 @@
+procedure foo(a : integer;b : real);
+    begin
+        with a,b : integer; d: integer; do d := c[b] + a;
+    return;
+    end
+        

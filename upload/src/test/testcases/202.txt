@@ -1,0 +1,5 @@
+procedure foo(a : integer);
+            begin
+            putIntLn(4);
+            end
+        

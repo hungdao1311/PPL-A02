@@ -1,0 +1,12 @@
+
+var
+   d: real;
+procedure foo();
+begin
+   a := 10;
+   while  a < 20 
+    
+      if( a > 2) then       
+        a:=a+2;
+end
+        

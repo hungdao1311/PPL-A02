@@ -1,0 +1,6 @@
+
+        PROCEDURE test(): real;
+        begin
+            foo();
+        end
+        

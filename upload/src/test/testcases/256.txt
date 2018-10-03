@@ -1,0 +1,6 @@
+
+        PROCEDURE test_err();
+        begin
+            (-(1[1]))[1] := asd := ("aasd"+1;
+        end
+        

@@ -1,0 +1,12 @@
+
+Procedure Square(Index : Integer; Result : Integer);
+Begin
+    Result := Index * Index;
+End
+
+Procedure Main();
+Begin
+    Writeln("The square of 2 is: ");
+    Square(2, Result);
+End
+        

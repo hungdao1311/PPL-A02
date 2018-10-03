@@ -1,0 +1,16 @@
+
+Var
+    NewDir : String; 
+    F : String;
+
+Procedure Main();
+Begin
+    NewDir := FSearch("C:\\Pascal Programming", GetEnv("")); 
+    If NewDir = "" Then
+    CreateDir("C:\\Pascal Programming"); 
+    Assign(F,"C:\\Pascal Programming\\pascal-programming.txt");
+    ReWrite(F);
+    Writeln(F,"http://pascal-programming.info/"); 
+    Close(F); 
+End
+        

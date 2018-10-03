@@ -1,0 +1,6 @@
+
+            proceDure main(): real ;
+            BEGIN
+            putLn();
+            end
+        

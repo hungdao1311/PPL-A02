@@ -1,0 +1,5 @@
+procedure foo(a:integer);
+                begin
+                    while true do putstring(a);
+                end
+        

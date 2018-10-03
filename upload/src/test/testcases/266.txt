@@ -1,0 +1,9 @@
+
+        function foo(): integer;
+        var a,b: integer;
+        begin
+        d := 0; 
+        for x := 10 to 99 do
+        d:= d*x;
+        end
+        

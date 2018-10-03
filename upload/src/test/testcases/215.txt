@@ -1,0 +1,5 @@
+
+        fUnCTiOn foo(): real;
+        begin
+            bar();
+        end

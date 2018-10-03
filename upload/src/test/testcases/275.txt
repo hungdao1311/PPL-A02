@@ -1,0 +1,9 @@
+procedure PrintArea();
+                    var
+                    radius, area : real;
+                    begin
+                    radius := GetRadius();
+                    area := PI * radius * radius;
+                    WriteLn("The area is ", area);
+                    end
+                

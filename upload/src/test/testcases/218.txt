@@ -1,0 +1,6 @@
+
+        fUnCTiOn foo();
+        var a,b: integer;
+        begin
+            
+        end

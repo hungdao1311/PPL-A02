@@ -1,0 +1,6 @@
+procedure main();
+                beGin
+                    a := "abcede";
+                end
+
+            

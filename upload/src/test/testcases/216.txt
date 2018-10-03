@@ -1,0 +1,7 @@
+
+        fUnCTiOn foo(): integer;
+        var a,b: integer;
+        begin
+            a := a+b;
+            bar(a);
+        end

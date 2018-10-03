@@ -1,0 +1,7 @@
+
+        PROCEDURE test();
+        var a: long;
+        begin
+            foo();
+        end
+        

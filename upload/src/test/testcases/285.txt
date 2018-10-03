@@ -1,0 +1,24 @@
+
+        procedure MovePlayer(dx, dy: Integer);
+        var
+        newX, newY: Integer;
+        begin
+        newX := PlayerX + dx;
+        newY := PlayerY + dy;
+        
+        //if we are not out of bounds
+        if not ((newX <= 0) or (newX > COLUMN_COUNT) or (newY <= 0) or (newY > LINE_COUNT)) then
+        begin
+            if maze[newY, newX] = EMPTY then
+            begin
+            //clear the only location
+            maze[PlayerY, PlayerX] := EMPTY;
+            
+            //update player location
+            PlayerY := newY;
+            PlayerX := newX;      
+            maze[PlayerY, PlayerX] := PLAYER;
+            end
+        end
+        end
+        

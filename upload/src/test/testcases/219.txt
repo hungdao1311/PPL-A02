@@ -1,0 +1,12 @@
+
+var
+   d: real;
+procedure main();
+begin
+   while  a = true do
+   begin   
+      if( a > 15) then       
+      break;
+   end
+end
+        

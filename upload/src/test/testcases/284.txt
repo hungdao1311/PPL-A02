@@ -1,0 +1,30 @@
+
+        procedure LoadMaze(filename: String);
+        var
+        input: string;
+        line: String;
+        l, c: Integer;
+        begin
+        Assign(input, filename);
+        Reset(input);
+        
+        for l := 1 to LINE_COUNT do
+        begin
+            ReadLn(input, line);
+            for c := 1 to COLUMN_COUNT do
+            begin
+            //case line[c] of
+                " ":= maze[l, c] := EMPTY;
+                "W":= maze[l, c] := WALL;
+                "P":= 1 
+                begin
+                maze[l, c] := PLAYER;
+                PlayerX := c; //the column is x
+                PlayerY := l; //the line is y
+                end
+                "G":= maze[l, c] := GOAL;
+            end
+            end
+        end
+        end
+        
