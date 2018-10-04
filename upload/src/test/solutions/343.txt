@@ -1,0 +1,1 @@
+Program([VarDecl(Id(Ch),StringType),FuncDecl(Id(main),[],VoidType(),[],[CallStmt(Id(Writeln),[StringLiteral(Press \"\"q\"\" to exit...)]),AssignStmt(Id(Ch),CallExpr(Id(Readkey),[])),While(BinaryOp(<>,Id(Ch),StringLiteral(q)),[CallStmt(Id(Writeln),[StringLiteral(Please press \"\"q\"\" to exit.)]),AssignStmt(Id(Ch),CallExpr(Id(Readkey),[]))])])])

@@ -1,0 +1,1 @@
+Program([FuncDecl(Id(Factorial),[VarDecl(Id(n),IntType)],IntType,[VarDecl(Id(Result),IntType),VarDecl(Id(i),IntType)],[AssignStmt(Id(Result),Id(n)),If(BinaryOp(<=,Id(n),IntLiteral(1)),[AssignStmt(Id(Result),IntLiteral(1))],[For(Id(i)BinaryOp(-,Id(n),IntLiteral(1)),IntLiteral(1),False,[AssignStmt(Id(Result),BinaryOp(*,Id(Result),Id(i)))])]),AssignStmt(Id(Factorial),Id(Result))])])

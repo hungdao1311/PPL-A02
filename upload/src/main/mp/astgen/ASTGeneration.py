@@ -8,30 +8,38 @@ class ASTGeneration(MPVisitor):
 
     def visitDecl(self,ctx:MPParser.DeclContext):
     # decl : var_dec | func_dec | procedure_dec
+        if ctx.var_dec():
+            return ','.join(str(x) for x in self.visit(ctx.var_dec()))
         return self.visitChildren(ctx)
 
     def visitVar_dec(self,ctx:MPParser.Var_decContext):
     #var_dec : VAR var_dec_list SM
+
         return self.visit(ctx.var_dec_list())
+        # if len(res) == 1:
+        #     return res
+        # else:
+        #     cm = ','
+        #     return cm.join(str(x) for x in res)
     
     def visitVar_dec_list(self,ctx:MPParser.Var_dec_listContext):
     # var_dec_list : one_var_dec var_dec_list
     #              | one_var_dec;
         if (ctx.var_dec_list()):
-            return [self.visit(ctx.one_var_dec())] + [self.visit(ctx.var_dec_list())]
+            return self.visit(ctx.one_var_dec()) + self.visit(ctx.var_dec_list())
         else:
-            return [self.visit(ctx.one_var_dec())]
+            return self.visit(ctx.one_var_dec())
     def visitId_list(self,ctx:MPParser.Id_listContext):
     # id_list : ID CM id_list
     #         | ID;
         if (ctx.id_list()):
-            return [Id(ctx.ID().getText())] + [self.visit(ctx.id_list())]
+            return [Id(ctx.ID().getText())] + self.visit(ctx.id_list())
         else:
             return [Id(ctx.ID().getText())]
   
     def visitOne_var_dec(self,ctx:MPParser.One_var_decContext):
-    #one_var_dec: id_list COLON main_type SM;
-        return VarDecl(self.visit(x), self.visit(ctx.main_type()))
+    #one_var_dec: id_list COLON main_type SM   
+        return [VarDecl(x,self.visit(ctx.main_type())) for x in self.visit(ctx.id_list())]
 
     def visitMain_type(self,ctx:MPParser.Main_typeContext):
         return self.visitChildren(ctx)
@@ -78,7 +86,8 @@ class ASTGeneration(MPVisitor):
         elif ctx.FLOAT_LIT():
             return FloatLiteral(ctx.FLOAT_LIT().getText())
         elif ctx.BOOL_LIT():
-            return BoolLiteral(ctx.BOOL_LIT().getText())
+            mText = ctx.BOOL_LIT().getText().upper()
+            return BooleanLiteral('TRUE' == mText)
         elif ctx.ID():
             return Id(ctx.ID().getText())
         elif ctx.invo_exp():
@@ -89,9 +98,9 @@ class ASTGeneration(MPVisitor):
     def visitInvo_exp(self, ctx:MPParser.Invo_expContext):
     #invo_exp : ID LB exp_list RB;
         if (ctx.exp_list()) :
-            return CallStmt(Id(ctx.ID().getText()),self.visit(ctx.exp_list()))
+            return CallExpr(Id(ctx.ID().getText()),self.visit(ctx.exp_list()))
         else:
-            return CallStmt(Id(ctx.ID().getText()),[])
+            return CallExpr(Id(ctx.ID().getText()),[])
     def visitIndex_exp(self, ctx:MPParser.Index_expContext):
     #index_exp : (STRING_LIT | INT_LIT | FLOAT_LIT | BOOL_LIT | ID | invo_exp | LB exp RB) (LSB exp RSB)| index_exp LSB exp RSB;
         if (ctx.getChildCount() == 4): 
@@ -109,7 +118,7 @@ class ASTGeneration(MPVisitor):
                 arr = self.visit(ctx.invo_exp())
             elif ctx.index_exp():
                 arr = self.visit(ctx.index_exp())
-            index = self.visit(ctx.exp())
+            index = self.visit(ctx.exp(0))
         else:
             arr = self.visit(ctx.exp(0))
             index = self.visit(ctx.exp(1))
@@ -118,7 +127,7 @@ class ASTGeneration(MPVisitor):
     def visitExp_list(self, ctx:MPParser.Exp_listContext):  
     #exp_list : exp CM exp_list | exp;
         if (ctx.exp_list()):
-            return [self.visit(ctx.exp())] + [self.visit(ctx.exp_list())]
+            return [self.visit(ctx.exp())] + self.visit(ctx.exp_list())
         else:
             return [self.visit(ctx.exp())]
     
@@ -157,7 +166,10 @@ class ASTGeneration(MPVisitor):
         return self.visit(ctx.exp())
     
     def visitStmt(self, ctx:MPParser.StmtContext):
-        return self.visitChildren(ctx)
+        if ctx.compound_stmt():
+            return self.visitChildren(ctx)
+        else:
+            return [self.visitChildren(ctx)]
     
     def visitAssign_stmt(self, ctx:MPParser.Assign_stmtContext):
         #assign_stmt : lhs ASSIGN assign_stmt1;
@@ -181,7 +193,7 @@ class ASTGeneration(MPVisitor):
         if ctx.ELSE():
             return If(self.visit(ctx.exp()),self.visit(ctx.stmt(0)),self.visit(ctx.stmt(1)))
         else: 
-            return If(self.visit(ctx.exp()),self.visit(ctx.stmt()))
+            return If(self.visit(ctx.exp()),self.visit(ctx.stmt(0)))
     
     def visitWhile_stmt(self, ctx:MPParser.While_stmtContext):
         #while_stmt : WHILE exp DO stmt;
@@ -193,7 +205,7 @@ class ASTGeneration(MPVisitor):
             up = True
         else: 
             up = False 
-        return For(Id(ctx.ID().getText()),self.visit(ctx.exp(0)),self.visit(ctx.exp(1)),up,self.visit(stmt()))
+        return For(Id(ctx.ID().getText()),self.visit(ctx.exp(0)),self.visit(ctx.exp(1)),up,self.visit(ctx.stmt()))
     
     def visitBreak_stmt(self, ctx:MPParser.Break_stmtContext):
         return Break()
@@ -215,7 +227,7 @@ class ASTGeneration(MPVisitor):
         if ctx.getChildCount() == 0:
             return []
         else:
-            return [self.visit(ctx.stmt())] + [self.visit(ctx.stmt_list())]
+            return self.visit(ctx.stmt()) + self.visit(ctx.stmt_list())
  
     def visitWith_stmt(self, ctx:MPParser.With_stmtContext):
         return With(self.visit(ctx.var_dec_list()),self.visit(ctx.stmt()))

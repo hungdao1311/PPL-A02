@@ -1,0 +1,1 @@
+Program([VarDecl(Id(UFile),StringType),FuncDecl(Id(Main),[],VoidType(),[],[CallStmt(Id(Assign),[Id(UFile),StringLiteral(C:\\ADDTEXT.TXT)]),CallStmt(Id(Erase),[Id(UFile)])])])

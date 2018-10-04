@@ -1,0 +1,1 @@
+Program([VarDecl(Id(surname),StringType),FuncDecl(Id(main),[],VoidType(),[],[CallStmt(Id(Write),[StringLiteral(Enter your surname:)]),CallStmt(Id(readln),[Id(surname)]),CallStmt(Id(writeln),[]),CallStmt(Id(writeln),[]),CallStmt(Id(Writeln),[StringLiteral(Your full name is: ),Id(name),StringLiteral( ),Id(surname)]),CallStmt(Id(readln),[])])])

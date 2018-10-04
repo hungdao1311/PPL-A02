@@ -1,0 +1,1 @@
+Program([VarDecl(Id(a),IntType),FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(a),IntLiteral(10)),While(BinaryOp(<,Id(a),IntLiteral(20)),[CallStmt(Id(writeln),[StringLiteral(value of a: ),Id(a)]),AssignStmt(Id(a),BinaryOp(+,Id(a),IntLiteral(1))),If(BinaryOp(>,Id(a),IntLiteral(15)),[Break],[])])])])

@@ -59,7 +59,7 @@ class ArrayType(Type):
 
 class VoidType(Type): 
     def __str__(self):
-        return "VoidType" 
+        return "VoidType()" 
 
     def accept(self, v, param):
         return v.visitVoidType(self, param)
@@ -174,7 +174,7 @@ class For(Stmt):
         self.loop = loop
 
     def __str__(self):
-        return "For(" + str(self.id) + "," + str(self.expr1) + "," + str(self.expr2) + "," + str(self.up) + ',[' + ','.join(str(i) for i in self.loop) + "])"
+        return "For(" + str(self.id) + "" + str(self.expr1) + "," + str(self.expr2) + "," + str(self.up) + ',[' + ','.join(str(i) for i in self.loop) + "])"
 
     def accept(self, v, param):
         return v.visitFor(self, param)

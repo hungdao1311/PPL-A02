@@ -1,0 +1,1 @@
+Program([VarDecl(Id(age),IntType),VarDecl(Id(weekdays),IntType),VarDecl(Id(taxrate),FloatType),VarDecl(Id(net_income),FloatType),VarDecl(Id(choice),BoolType),VarDecl(Id(isready),BoolType),VarDecl(Id(name),StringType),VarDecl(Id(surname),StringType)])

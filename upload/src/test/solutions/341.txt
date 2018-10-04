@@ -1,0 +1,1 @@
+Program([VarDecl(Id(Counter),IntType),FuncDecl(Id(main),[],VoidType(),[],[For(Id(Counter)IntLiteral(1),IntLiteral(7),True,[CallStmt(Id(Writeln),[StringLiteral(for loop)])]),CallStmt(Id(Readln),[])])])

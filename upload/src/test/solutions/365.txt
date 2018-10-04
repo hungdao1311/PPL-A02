@@ -1,0 +1,1 @@
+Program([VarDecl(Id(a),IntType),VarDecl(Id(b),IntType),VarDecl(Id(c),IntType),FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(a),IntLiteral(10)),AssignStmt(Id(b),IntLiteral(20)),AssignStmt(Id(c),BinaryOp(+,Id(a),Id(b))),CallStmt(Id(writeln),[StringLiteral(value of a = ),Id(a),StringLiteral( b =  ),Id(b),StringLiteral( and c = ),Id(c)])])])
