@@ -160,21 +160,18 @@ class ASTGeneration(MPVisitor):
         return self.visit(ctx.exp())
     
     def visitStmt(self, ctx:MPParser.StmtContext):
-        if ctx.compound_stmt():
+        if ctx.compound_stmt() or ctx.assign_stmt():
             return self.visitChildren(ctx)
         else:
             return [self.visitChildren(ctx)]
     
     def visitAssign_stmt(self, ctx:MPParser.Assign_stmtContext):
-        #assign_stmt : lhs ASSIGN assign_stmt1;
-        return Assign(self.visit(ctx.lhs()),self.visit(ctx.assign_stmt1()))
-    
-    def visitAssign_stmt1(self, ctx:MPParser.Assign_stmt1Context):
-        #assign_stmt1 : exp SM| assign_stmt;
-        if ctx.getChildCount() == 1:
-            return self.visitChildren(ctx)
-        else:
-            return self.visit(ctx.exp()) 
+        #assign_stmt : lhs ASSIGN exp;
+        reversed_lhs = ctx.lhs()[::-1]
+        res = [Assign(self.visit(reversed_lhs[0]),self.visit(ctx.exp()))]
+        for x in range(len(reversed_lhs) - 1):
+            res = res + [Assign(self.visit(reversed_lhs[x+1]),self.visit(reversed_lhs[x]))]
+        return res
 
     def visitLhs(self, ctx:MPParser.LhsContext):
         if ctx.ID():

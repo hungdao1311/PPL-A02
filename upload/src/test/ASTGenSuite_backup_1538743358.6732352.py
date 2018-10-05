@@ -44,7 +44,7 @@ class ASTGenSuite(unittest.TestCase):
     return;
     end
         """
-        expect = str(Program([FuncDecl(Id(r'foo'),[VarDecl(Id(r'a'),IntType()),VarDecl(Id(r'b'),FloatType())],[],[Assign(ArrayCell(Id(r'a'),Id(r'b')),BinaryOp(r'+',Id(r'b'),IntLiteral(5))),Assign(Id(r'd'),ArrayCell(Id(r'a'),Id(r'b'))),Return(None)],VoidType())]))
+        expect = str(Program([FuncDecl(Id(r'foo'),[VarDecl(Id(r'a'),IntType()),VarDecl(Id(r'b'),FloatType())],[],[Assign(Id(r'd'),Assign(ArrayCell(Id(r'a'),Id(r'b')),BinaryOp(r'+',Id(r'b'),IntLiteral(5)))),Return(None)],VoidType())]))
         self.assertTrue(TestAST.test(input,expect,304))
 
     def test_if305(self):
@@ -184,7 +184,7 @@ End
             var g: real;
 
         """
-        expect = str(Program([VarDecl(Id(r'i'),IntType()),FuncDecl(Id(r'f'),[],[],[Return(IntLiteral(200))],IntType()),FuncDecl(Id(r'main'),[],[VarDecl(Id(r'main'),IntType())],[Assign(Id(r'main'),Id(r'f')),CallStmt(Id(r'foo'),[]),CallStmt(Id(r'putintln'),[Id(r'main')]),With([VarDecl(Id(r'i'),IntType()),VarDecl(Id(r'main'),IntType()),VarDecl(Id(r'f'),IntType())],[Assign(Id(r'i'),IntLiteral(100)),Assign(Id(r'f'),Id(r'i')),Assign(Id(r'main'),Id(r'f')),CallStmt(Id(r'putIntLn'),[Id(r'main')]),CallStmt(Id(r'putIntLn'),[Id(r'f')]),CallStmt(Id(r'putIntLn'),[Id(r'i')])]),CallStmt(Id(r'putintlN'),[Id(r'main')])],VoidType()),VarDecl(Id(r'g'),FloatType())]))
+        expect = str(Program([VarDecl(Id(r'i'),IntType()),FuncDecl(Id(r'f'),[],[],[Return(IntLiteral(200))],IntType()),FuncDecl(Id(r'main'),[],[VarDecl(Id(r'main'),IntType())],[Assign(Id(r'main'),Id(r'f')),CallStmt(Id(r'foo'),[]),CallStmt(Id(r'putintln'),[Id(r'main')]),With([VarDecl(Id(r'i'),IntType()),VarDecl(Id(r'main'),IntType()),VarDecl(Id(r'f'),IntType())],[Assign(Id(r'main'),Assign(Id(r'f'),Assign(Id(r'i'),IntLiteral(100)))),CallStmt(Id(r'putIntLn'),[Id(r'main')]),CallStmt(Id(r'putIntLn'),[Id(r'f')]),CallStmt(Id(r'putIntLn'),[Id(r'i')])]),CallStmt(Id(r'putintlN'),[Id(r'main')])],VoidType()),VarDecl(Id(r'g'),FloatType())]))
         self.assertTrue(TestAST.test(input,expect,311))
 
     def test_if_312(self):
@@ -278,7 +278,7 @@ begin
     a := a[2] := 1[2] := a[b[2]];
 end
         """
-        expect = str(Program([FuncDecl(Id(r'main'),[],[],[Assign(ArrayCell(IntLiteral(1),IntLiteral(2)),ArrayCell(Id(r'a'),ArrayCell(Id(r'b'),IntLiteral(2)))),Assign(ArrayCell(Id(r'a'),IntLiteral(2)),ArrayCell(IntLiteral(1),IntLiteral(2))),Assign(Id(r'a'),ArrayCell(Id(r'a'),IntLiteral(2)))],VoidType())]))
+        expect = str(Program([FuncDecl(Id(r'main'),[],[],[Assign(Id(r'a'),Assign(ArrayCell(Id(r'a'),IntLiteral(2)),Assign(ArrayCell(IntLiteral(1),IntLiteral(2)),ArrayCell(Id(r'a'),ArrayCell(Id(r'b'),IntLiteral(2))))))],VoidType())]))
         self.assertTrue(TestAST.test(input,expect,315))
 
     def test_array_dec316(self):

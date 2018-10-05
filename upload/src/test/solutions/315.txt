@@ -1,1 +1,1 @@
-Program([FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(a),AssignStmt(ArrayCell(Id(a),IntLiteral(2)),AssignStmt(ArrayCell(IntLiteral(1),IntLiteral(2)),ArrayCell(Id(a),ArrayCell(Id(b),IntLiteral(2))))))])])
+Program([FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(ArrayCell(IntLiteral(1),IntLiteral(2)),ArrayCell(Id(a),ArrayCell(Id(b),IntLiteral(2)))),AssignStmt(ArrayCell(Id(a),IntLiteral(2)),ArrayCell(IntLiteral(1),IntLiteral(2))),AssignStmt(Id(a),ArrayCell(Id(a),IntLiteral(2)))])])

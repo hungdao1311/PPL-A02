@@ -134,11 +134,6 @@ class MPVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MPParser#assign_stmt1.
-    def visitAssign_stmt1(self, ctx:MPParser.Assign_stmt1Context):
-        return self.visitChildren(ctx)
-
-
     # Visit a parse tree produced by MPParser#if_stmt.
     def visitIf_stmt(self, ctx:MPParser.If_stmtContext):
         return self.visitChildren(ctx)

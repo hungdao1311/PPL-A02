@@ -67,12 +67,9 @@ exp5: exp_element
 stmt : (assign_stmt | if_stmt | while_stmt | return_stmt | for_stmt | break_stmt | continue_stmt                  //statements
      | compound_stmt | with_stmt | call_stmt );
 
-assign_stmt : lhs ASSIGN assign_stmt1;
+assign_stmt : (lhs ASSIGN)+ exp SM;
 
 lhs : ID | index_exp ;
-
-assign_stmt1 : exp SM
-             | assign_stmt;
 
 if_stmt : IF exp THEN stmt (ELSE stmt)?;
 
