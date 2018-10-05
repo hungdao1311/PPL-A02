@@ -1,23 +1,23 @@
 
-var
-   a: integer;
+Var
+	f : String; { file var of type byte }
+	sz : Integer;  { var for the size }
 
-procedure main();
-begin
-   a := 10;
-   
-   while not ( a = 20 ) do
-   begin
-      if( a = 15) then
-      
-      begin
-         (* skip the iteration *)
-         a := a + 1;
-         continue;
-      end
-      
-      writeln("value of a: ", a);
-      a := a+1;
-   end
-end
+Procedure Main();
+Begin
+	Assign(f,"C:\\anyfile.txt");
+	{$I-} Reset(f); {$I+}
+	If (IOResult <> 0) Then
+ 	Begin     { file found? }
+  		Writeln("File not found.. exiting");
+  		Readln();
+ 	End Else
+ 	Begin
+			{ Return the file size in Kilobytes }
+  		sz := Round(FileSize(f)/1024);
+  		Writeln("Size of the file in Kilobytes: ",sz," Kb");
+  		Readln();
+  		Close(f); 
+ 	End
+End
         

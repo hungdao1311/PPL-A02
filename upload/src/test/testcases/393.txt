@@ -1,5 +1,16 @@
 
-procedure main();
+function max(num1, num2: integer): integer;
+
+var
+   (* local variable declaration *)
+   result: integer;
+
 begin
-    writeln("7cb676d57114874e00c536916e6dcad2a5d3cb8c9a5abc06335df359cd9a6ef9");
+   if (num1 > num2) then
+      result := num1;
+   
+   else
+      result := num2;
+   max := result;
 end
+        

@@ -1,1 +1,1 @@
-Program([FuncDecl(Id(main),[],VoidType(),[],[CallStmt(Id(writeln),[StringLiteral(7cb676d57114874e00c536916e6dcad2a5d3cb8c9a5abc06335df359cd9a6ef9)])])])
+Program([FuncDecl(Id(max),[VarDecl(Id(num1),IntType),VarDecl(Id(num2),IntType)],IntType,[VarDecl(Id(result),IntType)],[If(BinaryOp(>,Id(num1),Id(num2)),[AssignStmt(Id(result),Id(num1))],[AssignStmt(Id(result),Id(num2))]),AssignStmt(Id(max),Id(result))])])

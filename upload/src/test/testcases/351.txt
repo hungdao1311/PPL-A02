@@ -1,27 +1,22 @@
 
-var
-   { local variable definition }
-   a : integer;
+Var
+	FName, Txt : String;
+	UserFile   : String; 
 
-procedure main();
-begin
-   a := 100;
-   (* check the boolean condition *)
-   if (a = 10)  then
-      (* if condition is true then print the following *)
-      writeln("Value of a is 10" );
-   
-   else if ( a = 20 ) then
-      (* if else if condition is true *)
-      writeln("Value of a is 20" );
-   
-   else if( a = 30 ) then 
-      (* if else if condition is true  *)
-      writeln("Value of a is 30" );
-   
-   else
-      (* if none of the conditions is true *)
-      writeln("None of the values is matching" );
-      writeln("Exact value of a is: ", a );
-end
+Procedure Main();
+Begin
+	FName := "Textfile";
+	Assign(UserFile, "C:\\" + FName + ".txt"); {assign a text file}
+	Rewrite(UserFile); {open the file "fname" for writing}
+	Writeln(UserFile, "PASCAL PROGRAMMING");
+	Writeln(UserFile, "if you did not understand something,");
+	Writeln(UserFile, "please send me an email to:");
+	Writeln(UserFile, "victorsaliba@hotmail.com");
+	Writeln("Write some text to the file:");
+	Readln(Txt);
+	Writeln(UserFile, "");
+	Writeln(UserFile, "The user entered this text:");
+	Writeln(UserFile, Txt);
+	Close(UserFile);
+End
         

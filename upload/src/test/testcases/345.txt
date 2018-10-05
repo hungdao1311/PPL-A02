@@ -1,12 +1,5 @@
 
-Function Factorial(n : Integer) : Integer;
-Var
-	Result : Integer;
-
-Begin
-	If n = 1 Then 
-		Factorial := 1;
-	Else
-		Factorial := n*Factorial(n-1);
-End
+        procedurE foo () ;
+            begin
+            End          
         

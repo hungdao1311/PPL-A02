@@ -1,29 +1,12 @@
 
-var
-   a, b, ret : integer;
-
-(*function definition *)
-function max(num1, num2: integer): integer;
-var
-   (* local variable declaration *)
-   result: integer;
-
-begin
-   if (num1 > num2) then
-      result := num1;
-   
-   else
-      result := num2;
-   max := result;
-end
-
+Var n1, n2 : string;
 procedure main();
-begin
-   a := 100;
-   b := 200;
-   (* calling a function to get max value *)
-   ret := max(a, b);
-   
-   writeln( "Max value is : ", ret );
-end
+Begin
+    Writeln("Enter two numbers to exit");
+    While not ((n1 = "0") OR (n2 = "0")) do
+    Begin
+        write(n1);
+        write(n2);
+    End
+End
         

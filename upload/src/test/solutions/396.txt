@@ -1,1 +1,1 @@
-Program([FuncDecl(Id(main),[],VoidType(),[],[CallStmt(Id(writeln),[StringLiteral(a0f8b2c4cb1ac82abdb37f0fe5203b97be556c4468c83bba18684d620fd8eaf9)])])])
+Program([FuncDecl(Id(test),[],VoidType(),[VarDecl(Id(a),FloatType)],[CallStmt(Id(putln),[]),CallStmt(Id(writeln),[BinaryOp(+,Id(abced),Id(aced))])])])

@@ -1,5 +1,8 @@
 
-procedure main();
-begin
-    writeln("a0f8b2c4cb1ac82abdb37f0fe5203b97be556c4468c83bba18684d620fd8eaf9");
-end
+        PROCEDURE test();
+        var a: real;
+        begin
+            putln();
+            writeln(abced+aced);
+        end
+        

@@ -1,1 +1,1 @@
-Program([VarDecl(Id(S),StringType),FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(S),StringLiteral(Hey there! How are you?)),CallStmt(Id(Write),[StringLiteral(The word \"How\" is found at char index )]),CallStmt(Id(Writeln),[CallExpr(Id(Pos),[StringLiteral(How),Id(S)])]),If(BinaryOp(<=,CallExpr(Id(Pos),[StringLiteral(Why),Id(S)]),IntLiteral(0)),[CallStmt(Id(Writeln),[StringLiteral(\"Why\" is not found.)])],[])])])
+Program([FuncDecl(Id(foo),[],IntType,[],[CallStmt(Id(foo),[BinaryOp(+,Id(a),IntLiteral(2))])])])

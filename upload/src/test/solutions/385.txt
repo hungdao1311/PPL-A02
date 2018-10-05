@@ -1,1 +1,1 @@
-Program([FuncDecl(Id(main),[],VoidType(),[],[CallStmt(Id(writeln),[StringLiteral(a0d177b4967a6d99f4ff117defe1c0d23d4e78ca4630febcb948ee9e4520eff3)])])])
+Program([FuncDecl(Id(nested_ifelseChecking),[],VoidType(),[VarDecl(Id(a),IntType),VarDecl(Id(b),IntType)],[AssignStmt(Id(a),IntLiteral(100)),AssignStmt(Id(b),IntLiteral(200)),If(BinaryOp(=,Id(a),IntLiteral(100)),[If(BinaryOp(=,Id(b),IntLiteral(200)),[CallStmt(Id(writeln),[StringLiteral(Value of a is 100 and value of b is 200)])],[])],[])])])

@@ -1,11 +1,11 @@
 
-Var
-	myVar : Integer;
-	myArray : Array[1 .. 5] of Integer;
-
-Procedure Main();
+var check : Boolean;
+    abc   : String;
+Procedure main();
 Begin
-	myArray[2] := 25;
-	myVar := myArray[2];
+    While (check = True) Do
+    Begin
+        reAdLn(abc);
+    End
 End
         

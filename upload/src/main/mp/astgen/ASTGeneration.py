@@ -14,13 +14,7 @@ class ASTGeneration(MPVisitor):
 
     def visitVar_dec(self,ctx:MPParser.Var_decContext):
     #var_dec : VAR var_dec_list SM
-
         return self.visit(ctx.var_dec_list())
-        # if len(res) == 1:
-        #     return res
-        # else:
-        #     cm = ','
-        #     return cm.join(str(x) for x in res)
     
     def visitVar_dec_list(self,ctx:MPParser.Var_dec_listContext):
     # var_dec_list : one_var_dec var_dec_list

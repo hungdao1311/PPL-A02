@@ -1,5 +1,14 @@
 
-procedure main();
+procedure findMin(x, y, z: integer; m: integer); 
+(* Finds the minimum of the 3 values *)
+
 begin
-    writeln("76ebdb6d45c61ca12e622118cc90939ade672adf7890aa2b246405d4884dd75a");
-end
+   if x < y then
+      m := x;
+   else
+      m := y;
+   
+   if z <m then
+      m := z;
+end { end of procedure findMin }  
+        

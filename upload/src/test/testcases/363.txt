@@ -1,23 +1,12 @@
 
-var
-   i: integer;
-function fibonacci(n: integer): integer;
-
-begin
-   if n=1 then
-      fibonacci := 0;
-   
-   else if n=2 then
-      fibonacci := 1;
-   
-   else
-      fibonacci := fibonacci(n-1) + fibonacci(n-2);
-end
-
-procedure main();
-begin
-   for i:= 1 to 10 do
-   
-   write(fibonacci (i), "  ");
-end
-        
+                procedure qsort_recur();
+                BEGIN { QuicksortRecur }
+                { If there's anything to do... }
+                IF start < stop THEN 
+                    BEGIN
+                        splitpt := Split(start, stop);
+                        QuicksortRecur(start, splitpt-1);
+                        QuicksortRecur(splitpt+1, stop);
+                    END
+                END
+                

@@ -1,16 +1,11 @@
 
-function max(num1, num2: integer): integer;
+Var
+	myVar : Integer;
+	myArray : Array[1 .. 5] of Integer;
 
-var
-   (* local variable declaration *)
-   result: integer;
-
-begin
-   if (num1 > num2) then
-      result := num1;
-   
-   else
-      result := num2;
-   max := result;
-end
+Procedure Main();
+Begin
+	myArray[2] := 25;
+	myVar := myArray[2];
+End
         

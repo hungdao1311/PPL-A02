@@ -1,1 +1,1 @@
-Program([VarDecl(Id(UFile),StringType),FuncDecl(Id(Main),[],VoidType(),[],[CallStmt(Id(Assign),[Id(UFile),StringLiteral(C:\\ADDTEXT.TXT)]),CallStmt(Id(Erase),[Id(UFile)])])])
+Program([FuncDecl(Id(DrawLine),[VarDecl(Id(X),IntType),VarDecl(Id(Y),IntType)],VoidType(),[],[For(Id(count)IntLiteral(1),IntLiteral(10),True,[CallStmt(Id(Write),[CallExpr(Id(chr),[IntLiteral(196)])])])])])

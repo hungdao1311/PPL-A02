@@ -1,11 +1,5 @@
-
-Var 
-	S1, S2 : String;
-
-Procedure main();
-Begin
-	S1 := "Hey!";
-	S2 := " How are you?";
-	Write(Concat(S1, S2)); { "Hey! How are you?" }
-End
-        
+function  foo () :  real ;
+        begin
+        if ( true )  then return 2;     
+        else return 2;     
+        end

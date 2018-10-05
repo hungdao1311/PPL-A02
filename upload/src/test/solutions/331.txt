@@ -1,1 +1,1 @@
-Program([VarDecl(Id(S1),StringType),VarDecl(Id(S2),StringType),FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(S1),StringLiteral(Hey!)),AssignStmt(Id(S2),StringLiteral( How are you?)),CallStmt(Id(Write),[CallExpr(Id(Concat),[Id(S1),Id(S2)])])])])
+Program([FuncDecl(Id(foo),[],FloatType,[],[If(BooleanLiteral(True),[Return(Some(IntLiteral(2)))],[Return(Some(IntLiteral(2)))])])])

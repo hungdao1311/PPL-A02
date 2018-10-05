@@ -1,1 +1,1 @@
-Program([VarDecl(Id(myVar),IntType),VarDecl(Id(myArray),ArrayType(1,5,IntType)),FuncDecl(Id(Main),[],VoidType(),[],[AssignStmt(ArrayCell(Id(myArray),IntLiteral(2)),IntLiteral(25)),AssignStmt(Id(myVar),ArrayCell(Id(myArray),IntLiteral(2)))])])
+Program([VarDecl(Id(check),BoolType),VarDecl(Id(abc),StringType),FuncDecl(Id(main),[],VoidType(),[],[While(BinaryOp(=,Id(check),BooleanLiteral(True)),[CallStmt(Id(reAdLn),[Id(abc)])])])])

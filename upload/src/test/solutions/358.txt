@@ -1,1 +1,1 @@
-Program([FuncDecl(Id(max),[VarDecl(Id(num1),IntType),VarDecl(Id(num2),IntType)],IntType,[VarDecl(Id(result),IntType)],[If(BinaryOp(>,Id(num1),Id(num2)),[AssignStmt(Id(result),Id(num1))],[AssignStmt(Id(result),Id(num2))]),AssignStmt(Id(max),Id(result))])])
+Program([VarDecl(Id(myVar),IntType),VarDecl(Id(myArray),ArrayType(1,5,IntType)),FuncDecl(Id(Main),[],VoidType(),[],[AssignStmt(ArrayCell(Id(myArray),IntLiteral(2)),IntLiteral(25)),AssignStmt(Id(myVar),ArrayCell(Id(myArray),IntLiteral(2)))])])

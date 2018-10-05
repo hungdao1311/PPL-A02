@@ -1,7 +1,7 @@
 
-procedure main();
-var a:integer;
-begin
-a := a = a and then b;
-end
-        
+        procedure main();
+        var a : integer;
+        begin
+        for x:= 1 to 10 do 
+        a := a*a + x;
+        end

@@ -1,5 +1,7 @@
 
-procedure main();
-begin
-    writeln("27e1615212f3c6ea846ed6c412df1361ce97f006ee20bb5aa2483a3b61d5cadd");
-end
+var
+age, weekdays : integer;
+taxrate, net_income: real;
+choice, isready: boolean;
+name, surname : string;
+        

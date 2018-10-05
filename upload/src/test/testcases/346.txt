@@ -1,7 +1,16 @@
 
-var
-age, weekdays : integer;
-taxrate, net_income: real;
-choice, isready: boolean;
-name, surname : string;
+Procedure Square(Index : Integer; Result : Integer);
+Begin
+	Result := Index * Index;
+End
+
+Var
+	Res : Integer;
+
+Procedure Main();
+Begin
+	Writeln("The square of 5 is: ");
+	Square(5, Res);
+	Writeln(Res);
+End
         

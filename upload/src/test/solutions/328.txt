@@ -1,1 +1,1 @@
-Program([VarDecl(Id(S),StringType),FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(S),StringLiteral(Hey there! How are you?)),AssignStmt(Id(S),CallExpr(Id(Copy),[Id(S),IntLiteral(5),IntLiteral(6)])),CallStmt(Id(Write),[Id(S)])])])
+Program([FuncDecl(Id(foo),[],IntType,[],[CallStmt(Id(foo),[CallExpr(Id(foo),[IntLiteral(2)])])])])

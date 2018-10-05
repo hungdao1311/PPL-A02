@@ -1,1 +1,1 @@
-Program([VarDecl(Id(S),StringType),FuncDecl(Id(main),[],VoidType(),[],[AssignStmt(Id(S),StringLiteral(Hey! How are you?)),CallStmt(Id(Write),[CallExpr(Id(UpCase),[Id(S)])])])])
+Program([FuncDecl(Id(foo),[VarDecl(Id(a),IntType),VarDecl(Id(b),IntType),VarDecl(Id(c),FloatType)],VoidType(),[VarDecl(Id(x),FloatType),VarDecl(Id(y),FloatType)],[Return(None)])])

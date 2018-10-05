@@ -1,1 +1,1 @@
-Program([FuncDecl(Id(findMin),[VarDecl(Id(x),IntType),VarDecl(Id(y),IntType),VarDecl(Id(z),IntType),VarDecl(Id(m),IntType)],VoidType(),[],[If(BinaryOp(<,Id(x),Id(y)),[AssignStmt(Id(m),Id(x))],[AssignStmt(Id(m),Id(y))]),If(BinaryOp(<,Id(z),Id(m)),[AssignStmt(Id(m),Id(z))],[])])])
+Program([FuncDecl(Id(PrintArea),[],VoidType(),[VarDecl(Id(radius),FloatType),VarDecl(Id(area),FloatType)],[AssignStmt(Id(radius),CallExpr(Id(GetRadius),[])),AssignStmt(Id(area),BinaryOp(*,BinaryOp(*,Id(PI),Id(radius)),Id(radius))),CallStmt(Id(WriteLn),[StringLiteral(The area is ),Id(area)])])])

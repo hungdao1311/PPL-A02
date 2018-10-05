@@ -1,12 +1,6 @@
-
-Var
-	UFile : String;
-
-Procedure main();
-Begin
-	Assign(UFile, "C:\\ADDTEXT.TXT");
-	ReWrite(UFile); 
-	Writeln(UFile, "How many sentences " + "are present in this file?");
-	Close(UFile);
-End
-        
+procedurE inndeeexxx();
+        begin
+            (e>d)[5] := abc+a[1][2]; 
+            foo(2)[a+3] := 5;
+            ca[1][10] := 123;
+        end

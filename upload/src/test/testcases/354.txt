@@ -1,13 +1,10 @@
 
-var
-   a: integer;
+Var
+	UFile : String; { or it could be of "file" type}
 
-procedure main();
-begin
-   for a := 10  to 20 do
-   
-   begin
-      writeln("value of a: ", a);
-   end
-end
+Procedure Main();
+Begin
+	Assign(UFile, "C:\\abasdcasdcT.TXT");
+	Erase(UFile); 
+End
         

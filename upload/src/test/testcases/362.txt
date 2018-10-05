@@ -1,21 +1,15 @@
 
-var
-   num, f: integer;
-function fact(x: integer): integer; (* calculates factorial of x - x! *)
+Var
+	i : Integer;
+	myIntArray : Array[1 .. 20] of Integer;
+	myBoolArray : Array[1 .. 20] of Boolean;
 
-begin
-   if x=0 then
-      fact := 1;
-   else
-      fact := x * fact(x-1); (* recursive call *)
-end { end of function fact}
-
-procedure main();
-begin
-   writeln(" Enter a number: ");
-   readln(num);
-   f := fact(num);
-   
-   writeln(" Factorial ", num, " is: " , f);
-end
+Procedure Main();
+Begin
+	For i := 1 to Length(myIntArray) do
+	Begin
+		myIntArray[i] := 1;
+		myBoolArray[i] := True;
+	End
+End
         

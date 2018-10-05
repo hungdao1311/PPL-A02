@@ -1,23 +1,12 @@
 
-Var
-	t : String;
-	s : String;
-
-Procedure main();
+Procedure Square(Index : Integer; Result : Integer);
 Begin
-	Assign(t, "C:\\ABC.DEF");
-	{$I-}   { disable i/o error checking }
-	Reset(t);
-	{$I+}   { enable again i/o error checking - important }
-	If (IOResult <> 0) Then
-	Begin
-		Writeln("The file required to be opened is not found!");
-		Readln();
-	End Else 
-	Begin
-		Readln(t,s);
-		Writeln("The first line of the file reads: ",s);
-		Close(t);
-	End
+    Result := Index * Index;
+End
+
+Procedure Main();
+Begin
+    Writeln("The square of 2 is: ");
+    Square(2, Result);
 End
         

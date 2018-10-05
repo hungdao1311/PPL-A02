@@ -1,16 +1,7 @@
 
-var
-firstname, surname: string;
-
-procedure main();
-begin
-   writeln("Please enter your first name: ");
-   readln(firstname);
-   
-   writeln("Please enter your surname: ");
-   readln(surname);
-   
-   writeln();
-   writeln(message, " ", firstname, " ", surname);
-end
-        
+        function foo(): real;
+        var a,b: integer;
+        begin
+        while (a>b) do  
+        a := a/b;
+        end

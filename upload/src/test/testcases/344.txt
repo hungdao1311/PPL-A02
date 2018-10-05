@@ -1,16 +1,22 @@
 
-Function Factorial(n : Integer) : Integer;
-Var
-	Result : Integer;
-	i : Integer;
-
+Procedure DrawLine(X : Integer; Y : Integer);
+{ the declaration of the variables in brackets are called parameters }
+Var Counter : Integer; { this is called a local variable }
 Begin
-	Result := n;
-	If (n <= 1) Then
-		Result := 1;
-	Else
-	For i := n-1 DownTo 1 do
-		Result := Result * i; 
-	Factorial := Result;
+	GotoXy(X,Y); {here I use the arguments of X and Y}
+	textcolor(green);
+	For Counter := 1 to 10 do
+	Begin 
+		Write(chr(196));
+	End
+End
+
+Procedure main();
+Begin
+	DrawLine(10,5);
+	DrawLine(10,6);
+	DrawLine(10,7);
+	DrawLine(10,10);
+	Readkey();
 End
         

@@ -1,30 +1,16 @@
 
-  { An Extended  Payroll program }
-  { Decision  nested in Else branch of outer Decision }
-  { Normal  indentation }
-  VAR Hours, Pay: INTEGER;
-  PROCEDURE main();
-  BEGIN
-  RegularRate := 10;
-  ExtraIncrease :=  5;
-  DoubleIncrease :=  5;
-  BaseHours := 40;
-  ExtraHours := 20;
-  HoursInWeek := 7 * 24;
-  DoubleTimeStart  := BaseHours + ExtraHours;
-  Write("Enter  hours: ");
-  Read(Hours);
-  WriteLn();
-  IF Hours >= 0  THEN { regular pay}
-  Pay :=  RegularRate * Hours;
-  IF Hours >  BaseHours THEN { add extra pay }
-  Pay := Pay +  ExtraIncrease * (Hours - BaseHours);
-  IF Hours >  DoubleTimeStart THEN { add double pay }
-  Pay := Pay +  DoubleIncrease *
-  (Hours - DoubleTimeStart);
-  IF (Hours <  0) OR (Hours > HoursInWeek) THEN
-  Pay := 0;
-  WriteLn("The  gross pay is ", Pay);
-  END {  NewExtendedPay }
+Function Factorial(n : Integer) : Integer;
+Var
+	Result : Integer;
+	i : Integer;
 
+Begin
+	Result := n;
+	If (n <= 1) Then
+		Result := 1;
+	Else
+	For i := n-1 DownTo 1 do
+		Result := Result * i; 
+	Factorial := Result;
+End
         

@@ -1,1 +1,1 @@
-Program([VarDecl(Id(myString),StringType),FuncDecl(Id(Main),[],VoidType(),[],[AssignStmt(Id(myString),StringLiteral(Hey! How are you?)),CallStmt(Id(Writeln),[StringLiteral(The length of the string is ),CallExpr(Id(byte),[ArrayCell(Id(myString),IntLiteral(0))])]),CallStmt(Id(Write),[ArrayCell(Id(myString),CallExpr(Id(byte),[ArrayCell(Id(myString),IntLiteral(0))]))]),CallStmt(Id(Write),[StringLiteral( is the last character.)])])])
+Program([FuncDecl(Id(foo),[],IntType,[],[CallStmt(Id(foo),[]),CallStmt(Id(bar),[Id(a)])])])

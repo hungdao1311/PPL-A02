@@ -1,11 +1,6 @@
 
-Var 
-	S : String;
-
-Procedure main();
-Begin
-	S := "Hey Max! How are you?";
-	Delete(S, 4, 4); { "Hey! How are you?" }
-	Write(S);
-End
+        PROCEDURE test_err();
+        begin
+            foo := a[b[2]];
+        end
         

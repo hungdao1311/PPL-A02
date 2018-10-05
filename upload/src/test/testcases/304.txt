@@ -1,13 +1,6 @@
-
-Var 
-	surname: String;
-procedure main();
-Begin
-	Write("Enter your surname:");
-	readln(surname);
-	writeln();
-	writeln();
-	Writeln("Your full name is: ",name," ",surname);
-	readln();
-End
+procedure foo(a : integer;b : real);
+    begin
+        d := a[b] := b + 5;
+    return;
+    end
         

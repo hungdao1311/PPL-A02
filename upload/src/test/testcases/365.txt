@@ -1,14 +1,13 @@
 
-var
-   a, b, c: integer;
+Var
+	S : String;
 
-procedure main();
-begin
-   (* actual initialization *)
-   a := 10;
-   b := 20;
-   c := a + b;
-   
-   writeln("value of a = ", a , " b =  ",  b, " and c = ", c);
-end
+Procedure main();
+Begin
+	S := "Hey there! How are you?";
+	Write("The word \"How\" is found at char index ");
+	Writeln(Pos("How", S));
+	If Pos("Why", S) <= 0 Then
+		Writeln("\"Why\" is not found.");
+End
         

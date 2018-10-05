@@ -1,20 +1,10 @@
 
-Procedure InsertionSort(numbers : Array[1 .. 100] of Integer; size : Integer);
 Var
-	i, j, index : Integer;
+    UFile : String; { or it could be of "file" type}
 
-
+Procedure Main();
 Begin
-	For i := 2 to size-1 do
-	Begin
-		index := numbers[i];
-		j := i;
-		While ((j > 1) AND (numbers[j-1] > index)) do
-		Begin
-			numbers[j] := numbers[j-1];
-			j := j - 1;
-		End
-		numbers[j] := index;
-	End
+    Assign(UFile, "C:\\ADDTEXT.TXT");
+    Erase(UFile); 
 End
         

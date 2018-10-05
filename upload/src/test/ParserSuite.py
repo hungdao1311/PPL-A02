@@ -392,7 +392,7 @@ End
         end
         """
         expect = "successful"
-        self.assertTrue(TestParser.test(input,expect,233));
+        self.assertTrue(TestParser.test(input,expect,233))
 
     def test_for234(self):
         input = """

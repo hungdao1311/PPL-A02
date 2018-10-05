@@ -1,19 +1,20 @@
 
-var
-   { local variable definition }
-   a : integer;
+Var
+	UserFile : String;
+	FileName, TFile : String;
 
-procedure main();
-begin
-   a := 100;
-   (* check the boolean condition *)
-   if( a < 20 ) then
-      (* if condition is true then print the following *)
-      writeln("a is less than 20" );
-   
-   else
-      (* if condition is false then print the following *) 
-      writeln("a is not less than 20" );
-      writeln("value of a is : ", a);
-end
+Procedure Main();
+Begin
+	Writeln("Enter the file name (including its full path) of the text file (without the extension):");
+	Readln(FileName); { A .txt file will be assigned to a text variable }
+	Assign(UserFile, FileName + ".txt");
+	Reset(UserFile); { "Reset(x)" - means open the file x and reset cursor to the beginning of file }
+	While NOT Eof(UserFile) Do
+    Begin
+		Readln(UserFile,TFile);
+		Writeln(TFile);
+	End
+	Close(UserFile);
+	Readln();
+End
         

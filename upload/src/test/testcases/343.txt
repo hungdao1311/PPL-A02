@@ -1,14 +1,11 @@
 
-Var Ch : String;
+Var 
+    S : String;
 
 Procedure main();
 Begin
-	Writeln("Press \"\"q\"\" to exit...");
-	Ch := Readkey();
-	While Ch <> "q" do 
-	Begin
-		Writeln("Please press \"\"q\"\" to exit.");
-		Ch := Readkey();
-	End
+    S := "Hey your best friend";
+    Write(S);
+
 End
         
